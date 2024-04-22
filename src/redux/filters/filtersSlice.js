@@ -6,7 +6,7 @@ const initialState = {
   },
 };
 
-const filterSlice = createSlice({
+const slice = createSlice({
   name: 'filter',
   initialState,
   selectors: {
@@ -18,6 +18,6 @@ const filterSlice = createSlice({
     },
   },
 });
-export const filterReducer = filterSlice.reducer;
-export const { selectedName } = filterSlice.selectors;
-export const { changeFilter } = filterSlice.actions;
+export const filterReducer = slice.reducer;
+export const { selectedName } = slice.selectors;
+export const { changeFilter } = slice.actions;

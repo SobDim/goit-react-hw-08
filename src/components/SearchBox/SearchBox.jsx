@@ -1,4 +1,4 @@
-import { changeFilter } from '../../redux/filtersSlice';
+import { changeFilter } from '../../redux/filters/filtersSlice';
 import s from './SearchBox.module.css';
 import { useDispatch } from 'react-redux';
 

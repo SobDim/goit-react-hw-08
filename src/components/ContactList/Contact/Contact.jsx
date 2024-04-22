@@ -2,13 +2,13 @@ import { FaPhone } from 'react-icons/fa6';
 import { IoPerson } from 'react-icons/io5';
 import s from './Contact.module.css';
 import { useDispatch } from 'react-redux';
-import { deleteContactThunk } from '../../../redux/contactsOps';
+import { deleteContact } from '../../../redux/contacts/contactsOps';
 
 const Contact = ({ contact }) => {
   const { name, number, id } = contact;
   const dispatch = useDispatch();
   const handleDelete = () => {
-    dispatch(deleteContactThunk(id));
+    dispatch(deleteContact(id));
   };
   return (
     <>

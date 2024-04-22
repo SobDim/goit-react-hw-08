@@ -4,7 +4,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { nanoid } from 'nanoid';
 import * as Yup from 'yup';
 import s from './ContactForm.module.css';
-import { addContactThunk } from '../../redux/contactsOps';
+import { addContact } from '../../redux/contacts/contactsOps';
 
 const phoneRegExp =
   /^((\+[1-9]{1,4}[ -]?)|(\([0-9]{2,3}\)[ -]?)|([0-9]{2,4})[ -]?)*?[0-9]{3,4}[ -]?[0-9]{3,4}$/;
@@ -27,7 +27,7 @@ const ContactForm = () => {
 
   const initialValues = { name: '', number: '' };
   const handleSubmit = (data, actions) => {
-    dispatch(addContactThunk({ ...data, id: nanoid() }));
+    dispatch(addContact({ ...data, id: nanoid() }));
     actions.resetForm();
   };
   return (
