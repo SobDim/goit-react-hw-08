@@ -1,0 +1,9 @@
+.wrapper_search {
+    padding: 20;
+}
+
+input {
+    border-radius: 8px;
+    width: 100%;
+
+}

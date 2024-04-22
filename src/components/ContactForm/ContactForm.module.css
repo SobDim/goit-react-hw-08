@@ -1,0 +1,18 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.red {
+    color: red;
+}
+
+
+
+form label {
+    font-size: 11px;
+    text-transform: uppercase;
+}
