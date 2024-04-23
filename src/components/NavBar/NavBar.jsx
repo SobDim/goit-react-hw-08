@@ -4,27 +4,35 @@ import { useSelector } from 'react-redux';
 import AuthNav from '../AuthNav/AuthNav.jsx';
 import UserMenu from '../UserMenu/UserMenu.jsx';
 
-const NavBar = () => {
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+
+import ContactPhoneOutlinedIcon from '@mui/icons-material/ContactPhoneOutlined';
+import { IconButton, Box } from '@mui/material';
+
+export default function NavBar() {
   const isLoggedIn = useSelector(selectIsLoggedIn);
-
   return (
-    <header>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        {!isLoggedIn ? (
-          <li>
-            <AuthNav />
-          </li>
-        ) : (
-          <li>
-            <UserMenu />
-          </li>
-        )}
-      </ul>
-    </header>
-  );
-};
+    <Box>
+      <AppBar position="sticky">
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
+          <NavLink to="/">
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <ContactPhoneOutlinedIcon />
+            </IconButton>
+          </NavLink>
 
-export default NavBar;
+          <Box sx={{ flexGrow: 0 }}>
+            {!isLoggedIn ? <AuthNav /> : <UserMenu />}
+          </Box>
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+}

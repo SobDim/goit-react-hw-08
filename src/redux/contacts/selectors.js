@@ -6,7 +6,10 @@ export const selectFilteredContacts = createSelector(
   [selectContacts, selectedName],
   (contacts, searchStr) => {
     return contacts.filter(item => {
-      return item.name.toLowerCase().includes(searchStr.toLowerCase());
+      return (
+        item.name.toLowerCase().includes(searchStr.toLowerCase()) ||
+        item.number.includes(searchStr)
+      );
     });
   }
 );

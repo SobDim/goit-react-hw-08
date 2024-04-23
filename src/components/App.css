@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
 }
 
@@ -51,6 +51,16 @@ ol {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+  /* color: inherit; */
+}
+
+.active {
+  color: #646cff;
+}
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
@@ -85,7 +95,57 @@ select {
   }
 }
 
-#container {
-  max-width: 450px;
-  margin: 0 auto;
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+
+
+
+input {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  outline: none;
+  border: none;
+  outline-color: #646cff;
+}
+
+input {
+  margin-top: 4px;
+  padding: 4px;
+  font-size: 18px;
+  color: white;
+  border-radius: 8px;
+
+  &:hover {
+    border: 2px solid #646cff;
+  }
+
+  &:active {
+    border: 2px solid #646cff;
+  }
+
+}
+
+label {
+  text-align: left;
+  margin-bottom: 8px;
 }
