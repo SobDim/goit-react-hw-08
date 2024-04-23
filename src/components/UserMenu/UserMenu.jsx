@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { logout } from '../../redux/auth/operations';
-import { selectEmail } from '../../redux/auth/authSlice';
+import { selectEmail } from '../../redux/auth/slice';
 
 const UserMenu = () => {
   const dispatch = useDispatch();

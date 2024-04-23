@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
-import AuthForm from '../../components/AuthForm/AuthForm.jsx';
+import AuthForm from '../components/AuthForm/AuthForm.jsx';
 import * as Yup from 'yup';
-import { register } from '../../redux/auth/operations.js';
+import { register } from '../redux/auth/operations.js';
 import { useNavigate } from 'react-router-dom';
 
 const RegistrationPage = () => {

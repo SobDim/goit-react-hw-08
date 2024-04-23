@@ -1,7 +1,7 @@
 import * as Yup from 'yup';
 import { useDispatch } from 'react-redux';
-import { login } from '../../redux/auth/operations.js';
-import AuthForm from '../../components/AuthForm/AuthForm.jsx';
+import { login } from '../redux/auth/operations.js';
+import AuthForm from '../components/AuthForm/AuthForm.jsx';
 import { useNavigate } from 'react-router-dom';
 const LoginPage = () => {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import { selectLoading } from '../../redux/contacts/contactsSlice';
+import { selectLoading } from '../../redux/contacts/slice';
 import { useSelector } from 'react-redux';
 import Contact from './Contact/Contact';
 import { selectFilteredContacts } from '../../redux/contacts/selectors';

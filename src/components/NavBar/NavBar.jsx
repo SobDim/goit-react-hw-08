@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { selectIsLoggedIn } from '../../redux/auth/authSlice.js';
+import { selectIsLoggedIn } from '../../redux/auth/slice.js';
 import { useSelector } from 'react-redux';
 import AuthNav from '../AuthNav/AuthNav.jsx';
 import UserMenu from '../UserMenu/UserMenu.jsx';

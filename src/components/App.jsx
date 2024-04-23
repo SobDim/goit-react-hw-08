@@ -4,15 +4,15 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
-import ContactsPage from '../pages/ContactsPage/ContactsPage';
-import NotFound from '../pages/NotFound/NotFound';
-import { selectIsRefreshing } from '../redux/auth/authSlice.js';
+import ContactsPage from '../pages/ContactsPage.jsx';
+import NotFound from '../pages/NotFound.jsx';
+import { selectIsRefreshing } from '../redux/auth/slice.js';
 import Loader from './Loader/Loader';
 import RestrictedRoute from '../routes/RestrictedRoute/RestrictedRoute';
-import RegistrationPage from '../pages/RegistrationPage/RegistrationPage';
-import LoginPage from '../pages/LoginPage/LoginPage';
+import RegistrationPage from '../pages/RegistrationPage.jsx';
+import LoginPage from '../pages/LoginPage.jsx';
 import PrivateRoute from '../routes/PrivateRoute/PrivateRoute.jsx';
-import HomeP from '../pages/HomePage/HomeP.jsx';
+import HomeP from '../pages/HomeP.jsx';
 import { refreshUser } from '../redux/auth/operations.js';
 
 function App() {
@@ -47,7 +47,7 @@ function App() {
           />
 
           <Route
-            path="/contacts"
+            path="contacts"
             element={
               <PrivateRoute>
                 <ContactsPage />
@@ -55,7 +55,7 @@ function App() {
             }
           />
         </Route>
-        <Route path="*" element={NotFound} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
