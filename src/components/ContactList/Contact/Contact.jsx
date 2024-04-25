@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../../redux/contacts/operations';
 import { useState } from 'react';
 import { Box, Button, Modal } from '@mui/material';
+import { BookTwoTone } from '@mui/icons-material';
 
 const style = {
   position: 'absolute',
@@ -49,14 +50,19 @@ const Contact = ({ contact }) => {
             </a>
           </p>
         </div>
+        <Button onClick={handleOpen}>Edit</Button>
         <Button onClick={handleOpen}>Delete</Button>
         <Modal open={open} onClose={handleClose}>
-          <Box sx={{ ...style, width: 400 }}>
-            <h2 id="parent-modal-title">Delete</h2>
-            <p id="parent-modal-description">{name}</p>
-            <button type="button" onClick={() => handleDelete(id)}>
-              Delete
-            </button>
+          <Box>
+            <Box>
+              <h2 id="parent-modal-title">Delete</h2>
+              <p id="parent-modal-description">{name}</p>
+            </Box>
+
+            <Box>
+              <Button onClick={() => handleDelete(id)}> Delete</Button>
+              <Button onClick={() => handleClose()}> Close</Button>
+            </Box>
           </Box>
         </Modal>
       </li>
